@@ -1,0 +1,24 @@
+## https://raw.github.com/github/gitignore/2f7c4e80629d1b02c9e1bce9fc54628e    d620d2d6/swift.gitignore                                                                     
+  2   2
+  3   3 # Xcode
+  4   4 #
+  5   5 # gitignore contributors: remember to update Global/Xcode.gitignore, Objecti    ve-C.gitignore & Swift.gitignore
+  6   6
+  7   7 ## Build generated
+  8   8 build/
+  9   9 DerivedData/
+ 10  10
+ 11  11 ## Various settings
+ 12  12 *.pbxuser
+ 13  13 !default.pbxuser
+ 14  14 *.mode1v3
+ 15  15 !default.mode1v3
+ 16  16 *.mode2v3
+ 17  17 !default.mode2v3
+ 18  18 *.perspectivev3
+ 19  19 !default.perspectivev3
+ 20  20 xcuserdata/
+ 21 .gitignore
+ 22 ".gitignore" 69L, 1542C
+ 23  
+
