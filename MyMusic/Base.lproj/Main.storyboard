@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,76 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MyMusic" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_pattern" translatesAutoresizingMaskIntoConstraints="NO" id="5bf-Ou-XE4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UFG-fh-0pi">
+                                <rect key="frame" x="52" y="293" width="150" height="150"/>
+                                <state key="normal" image="cymbal"/>
+                                <connections>
+                                    <action selector="cymbal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hbV-Ft-P4o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wgs-ck-LhD">
+                                <rect key="frame" x="212" y="291" width="150" height="150"/>
+                                <state key="normal" image="guitar"/>
+                                <connections>
+                                    <action selector="guitar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yq6-JA-qdg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlW-Nd-glo">
+                                <rect key="frame" x="99.5" y="504" width="55" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Play">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="play:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e6A-Bc-uOd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQI-xn-D7t">
+                                <rect key="frame" x="256.5" y="504" width="61" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aEY-jN-eoL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="XQI-xn-D7t" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="2a4-FK-sKU"/>
+                            <constraint firstItem="5bf-Ou-XE4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="877-VP-wc3"/>
+                            <constraint firstItem="UFG-fh-0pi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="8jz-gp-101"/>
+                            <constraint firstItem="5bf-Ou-XE4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CPq-Mv-uOh"/>
+                            <constraint firstItem="UFG-fh-0pi" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="ES1-O9-JIY"/>
+                            <constraint firstItem="nlW-Nd-glo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="80" id="K5W-te-AAc"/>
+                            <constraint firstAttribute="bottom" secondItem="5bf-Ou-XE4" secondAttribute="bottom" id="RqZ-wA-zf6"/>
+                            <constraint firstItem="XQI-xn-D7t" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="80" id="ZTt-df-KM0"/>
+                            <constraint firstItem="nlW-Nd-glo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="aFF-r8-nq0"/>
+                            <constraint firstItem="5bf-Ou-XE4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eNO-j8-s2I"/>
+                            <constraint firstItem="Wgs-ck-LhD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-80" id="hzV-qu-H1A"/>
+                            <constraint firstItem="Wgs-ck-LhD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="lKl-fm-Dc6"/>
+                            <constraint firstItem="5bf-Ou-XE4" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="yoe-Dx-2Dp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="132.58928571428572"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg_pattern" width="1334" height="1334"/>
+        <image name="cymbal" width="150" height="150"/>
+        <image name="guitar" width="150" height="150"/>
+    </resources>
 </document>
